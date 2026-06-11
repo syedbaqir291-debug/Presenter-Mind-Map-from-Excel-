@@ -586,7 +586,7 @@ function buildExport(D){
   return '<!DOCTYPE html>\n<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>OMAC \u00b7 '+sheetName+'<\/title><style>\n'+EXPORT_CSS+'<\/style><\/head><body>\n<div id="particles"><\/div>\n<div class="bar"><div class="brand"><div class="bp"><\/div>OMAC<\/div><span class="bar-name">'+sheetName+'<\/span><div class="sp"><\/div><span class="bar-chip">S M Baqir \u00b7 OMAC Developers<\/span><\/div>\n<div id="sc-map"><div class="bar2" id="bc-bar"><\/div><div class="map-body"><div class="sidebar"><div class="sb-head"><span class="sb-lbl" id="sb-lbl">Menu<\/span><\/div><div class="sb-scroll" id="sb-scroll"><\/div><\/div><div class="stage" id="stage"><\/div><\/div><div class="map-foot"><button class="btn-sm" onclick="resetRoot()">\ud83c\udfe0 Root<\/button><div class="prog"><div class="prog-fill" id="prog"><\/div><\/div><span class="foot-info" id="foot-info"><\/span><button class="btn-sm green" onclick="saveNotes()">\ud83d\udcbe Save Notes<\/button><\/div><\/div>\n<div class="toast-wrap" id="toast-wrap"><\/div>\n<script>\nvar _D=JSON.parse(decodeURIComponent(escape(atob("'+serialized+'"))));\n'+EXPORT_JS+'<\/script><\/body><\/html>';
 }
 
-var _theme="dark";
+var _theme="light";
 function toggleTheme(){
   _theme=_theme==="dark"?"light":"dark";
   document.documentElement.className=_theme==="light"?"light":"";
@@ -599,7 +599,7 @@ function toggleTheme(){
 (function(){
   try{
     var s=localStorage.getItem("omac-theme");
-    if(s==="light")toggleTheme();
+    if(s==="dark")toggleTheme();
   }catch(e){}
 })();
 
